@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 200px;
+        height: 230px;
+        background: #26242e;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .box input {
+        display: none;
+      }
+      .box label {
+        position: relative;
+        display: block;
+        width: 170px;
+        height: 45px;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        transition: 0.3s ease;
+        color: #fff;
+        cursor: pointer;
+      }
+      .box .mark {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 5px solid #fff;
+        margin: 1rem;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        background-color: #fff;
+      }
+      .box .mark::before {
+        content: "";
+        position: absolute;
+      }
+      .box input:checked ~ label,
+      .box input:checked ~ label .mark {
+        border-color: #7041fe;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <input type="radio" id="btn-one" name="size" />
+        <label for="btn-one">
+          <span class="mark"></span>
+          Small
+        </label>
+      </div>
+      <div class="box">
+        <input type="radio" id="btn-two" name="size" />
+        <label for="btn-two">
+          <span class="mark"></span>
+          Medium
+        </label>
+      </div>
+      <div class="box">
+        <input type="radio" id="btn-three" name="size" />
+        <label for="btn-three">
+          <span class="mark"></span>
+          Large
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
